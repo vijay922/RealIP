@@ -28,6 +28,8 @@ go mod init realip
 
 # Install dependencies
 go get github.com/miekg/dns
+go install golang.org/x/tools/cmd/goimports@latest
+goimports -w realip.go
 
 # Build the binary
 go build -o realip realip.go
